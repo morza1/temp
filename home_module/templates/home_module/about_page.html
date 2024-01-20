@@ -1,0 +1,38 @@
+{% extends 'shared/_layout.html' %}
+{% load static %}
+
+{% block title %}
+    درباره ما
+{% endblock %}
+
+
+{% block content %}
+    <div id="contact-page" class="container">
+        <div class="bg">
+            <div class="row">
+                <div class="row">
+                <div class="container">
+                    <div class="col-sm-12" style="overflow: hidden; margin-bottom: 40px; color: red"><h2 class="title text-center" style="color: red">
+                        مـا اینجـا هستیـم ... </h2>
+                    </div>
+                </div>
+            </div>
+                <div class="col-sm-12 about-address">
+                    <address>
+                        <p>
+                            {{ site_setting.address }}|
+                            تلفن تماس : {{ site_setting.phone }} |
+                            {% if site_setting.fax %}
+                                فکس : {{ site_setting.fax }} |
+                            {% endif %}
+                            {% if site_setting.email %}
+                                ایمیـل : {{ site_setting.email }}
+                            {% endif %}
+                        </p>
+                    </address>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
